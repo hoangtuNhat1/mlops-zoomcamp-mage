@@ -7,9 +7,9 @@ on:
 
 env:
   AWS_REGION: us-west-2
-  ECR_REPOSITORY: mlops-production-repository-new
+  ECR_REPOSITORY: mlops-production-repository
   ECS_CLUSTER: mlops-production-cluster
-  ECS_SERVICE: mlops-production-ecs-service-new
+  ECS_SERVICE: mlops-production-ecs-service
   ECS_TASK_DEFINITION: mlops-task
   CONTAINER_NAME: mlops-production-container
 
