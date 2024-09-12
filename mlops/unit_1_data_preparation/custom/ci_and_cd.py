@@ -8,6 +8,7 @@ from mlops.utils.deploy.aws import (
     create_user,
     save_credentials_to_file,
 )
+import numpy as np 
 
 if 'custom' not in globals():
     from mage_ai.data_preparation.decorators import custom

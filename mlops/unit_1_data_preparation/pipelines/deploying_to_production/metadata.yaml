@@ -187,7 +187,7 @@ blocks:
   language: python
   name: ci_and_cd
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: custom
   upstream_blocks: []
