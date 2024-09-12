@@ -18,6 +18,7 @@ services:
       - ~/.ssh:/root/.ssh:ro
       # Local machine’s GitHub configs
       - ~/.gitconfig:/root/.gitconfig:ro
+      - ./terraform-config:/app/terraform-config  # Mount local folder with Terraform configs
     restart: on-failure:5
     networks:
       - app-network

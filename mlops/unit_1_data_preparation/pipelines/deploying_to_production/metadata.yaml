@@ -1,0 +1,219 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/markdowns/running_operations_in_production.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: running_operations_in_production
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: running_operations_in_production
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/markdowns/create_iam_policy_to_deploy_mage.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: create_iam_policy_to_deploy_mage
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: create_iam_policy_to_deploy_mage
+- all_upstream_blocks_executed: true
+  color: yellow
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/custom/permissions.py
+  downstream_blocks:
+  - infrastructure_setup
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: permissions
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks: []
+  uuid: permissions
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/markdowns/terraform_setup_docs.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: terraform_setup_docs
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: terraform_setup_docs
+- all_upstream_blocks_executed: true
+  color: blue
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/custom/infrastructure_setup.py
+  downstream_blocks:
+  - teardown_deployed_resources
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: infrastructure_setup
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - permissions
+  uuid: infrastructure_setup
+- all_upstream_blocks_executed: true
+  color: pink
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/custom/teardown_deployed_resources.py
+  downstream_blocks:
+  - deploy
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: teardown_deployed_resources
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - infrastructure_setup
+  uuid: teardown_deployed_resources
+- all_upstream_blocks_executed: true
+  color: teal
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/custom/deploy.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: deploy
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - teardown_deployed_resources
+  uuid: deploy
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/markdowns/version_control_docs.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: version_control_docs
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: version_control_docs
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/markdowns/cicd.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: cicd
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: cicd
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/markdowns/add_secrets_to_github_repo.md
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: add_secrets_to_github_repo
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: add_secrets_to_github_repo
+- all_upstream_blocks_executed: true
+  color: purple
+  configuration:
+    file_source:
+      path: unit_1_data_preparation/custom/ci_and_cd.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ci_and_cd
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks: []
+  uuid: ci_and_cd
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-09-11 04:38:00.496116+00:00'
+data_integration: null
+description: ''
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: deploying_to_production
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: deploying_to_production
+variables: {}
+variables_dir: /home/src/mage_data/unit_1_data_preparation
+widgets: []

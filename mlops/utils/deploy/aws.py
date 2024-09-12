@@ -6,7 +6,7 @@ import boto3
 import requests
 
 AWS_CREDENTIALS_FILE_PATH = os.path.expanduser('~/.aws/credentials')
-IAM_USER_NAME = 'MageDeployer'
+IAM_USER_NAME = 'MageDeployerNew'
 IAM_USER_NAME_CICD = 'MageContinuousIntegrationDeployer'
 TERRAFORM_AWS_URL = 'https://raw.githubusercontent.com/mage-ai/mage-ai-terraform-templates/master/aws/policies'
 TERRAFORM_APPLY_URL = f'{TERRAFORM_AWS_URL}/TerraformApplyDeployMage.json'
